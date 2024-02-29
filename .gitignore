@@ -1,0 +1,8 @@
+test.sh
+docs
+*.sublime-project
+*.sublime-workspace
+.vscode
+.idea
+logs
+
