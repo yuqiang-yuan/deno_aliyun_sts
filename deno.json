@@ -1,10 +1,21 @@
 {
+    "name": "@yuanyq/aliyun_sts",
+    "version": "0.1.0",
+    "exports": {
+        ".": "./mod.ts",
+        "./sts_client.ts": "./sts_client.ts"
+    },
     "imports": {
-        "std/": "https://deno.land/std@0.217.0/",
+        "std/": "https://deno.land/std@0.218.0/",
         "hmac/": "https://deno.land/x/hmac@v2.0.1/"
     },
     "tasks": {
         "dev": "deno run --watch main.ts",
         "doc": "deno doc --html --name=\"Aliyun STS SDK\" ./*.ts"
+    },
+    "fmt": {
+        "exclude": [
+            "README.md"
+        ]
     }
 }
