@@ -7,3 +7,16 @@
 
 - [AssumeRole - 获取扮演角色的临时身份凭证](https://help.aliyun.com/zh/ram/developer-reference/api-sts-2015-04-01-assumerole?spm=a2c4g.11186623.0.0.104c2600muyjDV)
 - [OpenAPI Explorer: AssumeRole](https://next.api.aliyun.com/api/Sts/2015-04-01/AssumeRole)
+
+
+使用方法：
+
+```typescript
+const client = new StsClient("sts.aliyuncs.com", Deno.env.get("AID")!, Deno.env.get("ASEC")!);
+
+const response = await client.assumeRole(new AssumeRoleRequest(
+    Deno.env.get("ARN")!,
+    "aliyun-sts-deno-sdk",
+    policy)
+);
+```
